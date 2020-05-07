@@ -1,0 +1,1 @@
+web: java -jar target/oauth2login-0.0.1-SNAPSHOT.jar
