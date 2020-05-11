@@ -32,3 +32,4 @@ build/
 
 ### Environment Variables ###
 .env
+./src/main/resources/db-config.properties
