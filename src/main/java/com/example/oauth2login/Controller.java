@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
 
-    @Autowired
-    UserRepository userRepository;
-
     @GetMapping("/")
     public String helloWorld() {
         return "Hello World!";
@@ -22,7 +19,6 @@ public class Controller {
 
     @GetMapping("/data")
     public String data() {
-        userRepository.save(new User("username", "password"));
         return "Saved!";
     }
 }
