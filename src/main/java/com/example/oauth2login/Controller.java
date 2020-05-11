@@ -25,7 +25,7 @@ public class Controller {
     }
 
     @GetMapping("/data")
-    public List<User> data() {
-        return Arrays.asList(null)/*userRepository.findAll()*/;
+    public String data() {
+        return "Hi";
     }
 }
