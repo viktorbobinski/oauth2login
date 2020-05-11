@@ -17,7 +17,7 @@ public class Controller {
 
     @GetMapping("/user")
     public String restricted() {
-        return "Hello User!";
+        return "Hello Usersss!";
     }
 
     @GetMapping("/data")
