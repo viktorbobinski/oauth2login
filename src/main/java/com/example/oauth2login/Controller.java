@@ -22,6 +22,7 @@ public class Controller {
 
     @GetMapping("/data")
     public String data() {
-        return "Hi";
+        userRepository.save(new User("username", "password"));
+        return "Saved!";
     }
 }
