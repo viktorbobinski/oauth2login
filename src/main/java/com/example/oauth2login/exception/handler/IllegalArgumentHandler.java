@@ -1,4 +1,4 @@
-package com.example.oauth2login.handler;
+package com.example.oauth2login.exception.handler;
 
 import com.example.oauth2login.exception.IllegalArgumentException;
 import org.springframework.http.HttpStatus;
