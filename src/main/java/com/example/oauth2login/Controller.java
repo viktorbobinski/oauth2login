@@ -1,6 +1,7 @@
 package com.example.oauth2login;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,12 +18,17 @@ public class Controller {
     }
 
     @GetMapping("/")
-    public List<User> helloWorld() {
-        return userRepository.findAll();
+    public ResponseEntity<String> helloWorld() {
+        return ResponseEntity.ok("Hello World!");
     }
 
     @GetMapping("/user")
-    public String restricted() {
-        return "Hello User!";
+    public ResponseEntity<String> restricted() {
+        return ResponseEntity.ok("Hello User!");
+    }
+
+    @GetMapping("/data")
+    public ResponseEntity<List<User>> data() {
+        return ResponseEntity.ok(userRepository.findAll());
     }
 }
