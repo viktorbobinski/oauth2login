@@ -1,8 +1,9 @@
-package com.example.oauth2login;
+package com.example.oauth2login.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,8 +21,7 @@ public class User {
     @GeneratedValue
     Integer id;
     String username;
-
-    public User(String username) {
-        this.username = username;
-    }
+    String password;
+    boolean active;
+    private String roles;
 }
