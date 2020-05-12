@@ -10,15 +10,10 @@ import javax.persistence.Id;
 @Entity
 @Data
 @NoArgsConstructor
-public class Users {
+public class User {
 
     @Id
     @GeneratedValue
     Integer id;
     String username;
-
-    public Users(Integer id, String username) {
-        this.id = id;
-        this.username = username;
-    }
 }
